@@ -18,20 +18,9 @@
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a student passionate about web development.</p>
-    </section>
-
     <section id="courses">
         <h2>Courses Taken</h2>
         <div id="course-list">Loading courses...</div>
-        <button onclick="fetchCourses()">Show Courses</button>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: yourname@example.com</p>
     </section>
 
     <footer>
@@ -39,6 +28,8 @@
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", fetchCourses);
+
         function fetchCourses() {
             // Fetch JSON data from GitHub Page
             fetch('https://M1nDBr34k.github.io/AppDev/subjectenrolled.json')
